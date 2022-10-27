@@ -23,27 +23,27 @@ int multiplication_chet(int n) {
 }
 
 void my_arccsc(double x) {
-    double start = clock();
-    double a = 1.0/x;
+    double start_time = clock();
+    double slug = 1.0/x;
     double ex = pow(10, -15);
-    double rez = 0;
+    double rezult = 0;
     int i = 1;
-    int count = 0;
+    int count_slug = 0;
     cout << "Column\t" << "X\t" << "MY_ARCCSC\t" << "ARCCSC_C++";
     cout << "\t" << "COUNT\t" << "ABSOLUT_POGR\t" << "\t" << "OTNOSIT_POGR\t" << "\t" << "TIME\t" << endl;
-    while (fabs(a) > ex) {
-        count++;
-        rez += a;
-        double end = clock();
-        double abs_pogr = fabs(asin(1.0 / x) - rez);
+    while (fabs(slug) > ex) {
+        count_slug++;
+        rezult += slug;
+        double end_time = clock();
+        double abs_pogr = fabs(asin(1.0 / x) - rezult);
         double otn_pogr = fabs(abs_pogr / (asin(1 / x))) * 100;
-        if (count > 1) {
-            cout << count - 1 << "\t" << x << "\t" << rez << "\t" << asin(1.0 / x) << "\t";
-            cout << count << "\t" << abs_pogr << "\t" << "\t" << otn_pogr << "%";
-            cout << "\t" << "\t" << (double)(end - start) / CLOCKS_PER_SEC << "c" << endl;
+        if (count_slug > 1) {
+            cout << count_slug - 1 << "\t" << x << "\t" << rezult << "\t" << asin(1.0 / x) << "\t";
+            cout << count_slug << "\t" << abs_pogr << "\t" << "\t" << otn_pogr << "%";
+            cout << "\t" << "\t" << (double)(end_time - start_time) / CLOCKS_PER_SEC << "c" << endl;
         }
         i += 2;
-        a = (multiplication_nechet(i - 1) / (multiplication_chet(i) * i * pow(x, i)));
+        slug = (multiplication_nechet(i - 1) / (multiplication_chet(i) * i * pow(x, i)));
     }
 }
 
