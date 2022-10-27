@@ -51,7 +51,7 @@ void my_arccsc(double x) {
 int main()
 {
     double x; 
-    cout << "Input |x| > 1 "; 
+    cout << "Input x, |x| > 1 "; 
     cin >> x;
     if (fabs(x) <= 1)
         cout << "Not valid input";
