@@ -31,7 +31,7 @@ void my_arccsc(double x) {
     int count = 0;
     cout << "Column\t" << "X\t" << "MY_ARCCSC\t" << "ARCCSC_C++";
     cout << "\t" << "COUNT\t" << "ABSOLUT_POGR\t" << "\t" << "OTNOSIT_POGR\t" << "\t" << "TIME\t" << endl;
-    while (a > ex) {
+    while (fabs(a) > ex) {
         count++;
         rez += a;
         double end = clock();
@@ -45,7 +45,6 @@ void my_arccsc(double x) {
         i += 2;
         a = (multiplication_nechet(i - 1) / (multiplication_chet(i) * i * pow(x, i)));
     }
-    //cout << rez << endl;
 }
 
 
@@ -57,5 +56,5 @@ int main()
     if (fabs(x) <= 1)
         cout << "Not valid input";
     else
-        my_arccsc(fabs(x));
+        my_arccsc(x);
 }
